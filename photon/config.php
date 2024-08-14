@@ -4,3 +4,8 @@ add_filter('allowed_types', function($formats){
     $formats[] = 'webp';
     return $formats;
 });
+
+add_filter('url', function($url) {
+    $domain = ''; // Replace with your domain with trailing slash.
+    return str_replace('http://', $domain, $url);
+});
