@@ -1,10 +1,9 @@
 version: "3"
 services:
   photon:
-    image: ghcr.io/automattic/vip-container-images/photon:latest
+    build: ./photon
     volumes:
       - photon-uploads:/usr/share/webapps/photon/uploads
-      - ./photon/config.php:/usr/share/webapps/photon/config.php
 
   nginx:
     build: ./nginx
